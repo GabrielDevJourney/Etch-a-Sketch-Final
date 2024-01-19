@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1px;
+}
+.divForGrid{
+    flex: 0 0 calc(6.25% - 10px);
+    height: 40px;
+    border: 1px solid black;
+}
