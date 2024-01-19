@@ -1,14 +1,27 @@
-function createDivs() {
-    let container = document.querySelector('.container');
-    let totaldivs = 16 * 16;
-    for (let i= 0; i < totaldivs; ++i) {   
-        let newdiv = document.createElement('div');
-        newdiv.className = 'divForGrid';
-        //*adding mouse hover effect that change color
-        newdiv.addEventListener('mouseenter', () => {
-            newdiv.style.backgroundColor = "black";
-        });
-        container.appendChild(newdiv);
+const container = document.querySelector('.container');
+let sizeOfGrid = 16;
+
+const createGrid = (amtOfGrids) => {
+
+    for (let i = 0; i < amtOfGrids; i++) { 
+        
+        const row = document.createElement('div');
+        row.className = 'grid-row';
+
+        for (let j = 0; j < amtOfGrids; j++){
+            const widthAndHeight = 960 / sizeOfGrid;
+            const gridbox = document.createElement('div');
+            gridbox.className = 'grid-box';
+            gridbox.style.width = `${widthAndHeight}px`;
+            gridbox.style.height = `${widthAndHeight}px`;
+            //*adding mouse enter hover 
+            gridbox.addEventListener('mouseenter', () => {
+                gridbox.style.backgroundColor = 'black';
+            })
+            row.appendChild(gridbox);
+        }
+
+        container.appendChild(row);
     }
 }
-createDivs();
+createGrid(sizeOfGrid);
