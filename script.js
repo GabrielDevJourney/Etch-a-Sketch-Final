@@ -6,13 +6,9 @@ let sizeOfGrid = 16;
 function colorRandomize() {
     const colors = [];
 
+    const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`; 
 
-    for (let i = 0; i < 3; i++) {
-
-        colors.push(Math.floor(Math.random() * 256));
-    }
-
-    return "rgb(" + colors.join(", ") + ")";
+    return randomColor;
 }
 
 const createGrid = (amtOfGrids) => {
@@ -29,9 +25,22 @@ const createGrid = (amtOfGrids) => {
             gridbox.className = 'grid-box';
             gridbox.style.width = `${widthAndHeight}px`;
             gridbox.style.height = `${widthAndHeight}px`;
+
             //*adding mouse enter hover 
             gridbox.addEventListener('mouseenter', () => {
+
+                const currentOpacity = gridbox.style.opacity;
                 gridbox.style.backgroundColor = colorRandomize();
+
+                    if (currentOpacity) {
+                        gridbox.style.opacity = Math.min(
+                        Number(currentOpacity) * 1.5,
+                        1
+                        );
+                    } else {
+                        gridbox.style.opacity = 0.1;
+                    }
+
             })
             row.appendChild(gridbox);
         }
