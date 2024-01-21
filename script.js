@@ -2,6 +2,19 @@ const container = document.querySelector('.container');
 const resetBtn = document.querySelector('button');
 let sizeOfGrid = 16;
 
+//*function randomize color 
+function colorRandomize() {
+    const colors = [];
+
+
+    for (let i = 0; i < 3; i++) {
+
+        colors.push(Math.floor(Math.random() * 256));
+    }
+
+    return "rgb(" + colors.join(", ") + ")";
+}
+
 const createGrid = (amtOfGrids) => {
     container.innerHTML = '';
 
@@ -18,7 +31,7 @@ const createGrid = (amtOfGrids) => {
             gridbox.style.height = `${widthAndHeight}px`;
             //*adding mouse enter hover 
             gridbox.addEventListener('mouseenter', () => {
-                gridbox.style.backgroundColor = 'black';
+                gridbox.style.backgroundColor = colorRandomize();
             })
             row.appendChild(gridbox);
         }
