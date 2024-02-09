@@ -29,18 +29,8 @@ const createGrid = (amtOfGrids) => {
             //*adding mouse enter hover 
             gridbox.addEventListener('mouseenter', () => {
 
-                const currentOpacity = gridbox.style.opacity;
                 gridbox.style.backgroundColor = colorRandomize();
-
-                    if (currentOpacity) {
-                        gridbox.style.opacity = Math.min(
-                        Number(currentOpacity) * 1.5,
-                        1
-                        );
-                    } else {
-                        gridbox.style.opacity = 0.1;
-                    }
-
+                
             })
             row.appendChild(gridbox);
         }
