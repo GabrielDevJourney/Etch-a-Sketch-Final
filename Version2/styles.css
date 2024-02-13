@@ -15,6 +15,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: 0.5px solid black;
 }
 
 .main-header {
@@ -22,7 +23,7 @@
   font-family: "CustomFont", sans-serif;
   font-size: 60px;
   margin: auto;
-  padding-top: 30px;
+  padding: 30px;
   text-align: center;
   letter-spacing: 5px;
   line-height: 70px;
