@@ -3,6 +3,12 @@
   src: url("./fonts/OHIOPLAYER-XEO.TTF");
 }
 
+.anonymous-pro-regular {
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --header-color: #1d1f25;
   --etchFrameColor: #1d1f25;
@@ -10,6 +16,7 @@
   --modalColor: white;
   --textModal: #282936;
 }
+
 
 * {
   box-sizing: border-box;
@@ -29,4 +36,8 @@
   letter-spacing: 5px;
   line-height: 70px;
   color: var(--header-color);
+}
+
+.board-header{
+  font-family: ;
 }
