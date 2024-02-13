@@ -1,11 +1,14 @@
 @font-face {
-  font-family: "Etch a Sketch";
-  src: url(C:\Users\Gabriel\AppData\Local\Microsoft\Windows\Fonts);
+  font-family: "CustomFont";
+  src: url("./fonts/OHIOPLAYER-XEO.TTF");
 }
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+.main-header{
+  font-family: 'CustomFont', sans-serif;
+}
