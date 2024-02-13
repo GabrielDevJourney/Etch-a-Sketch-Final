@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Etch a Sketch";
+  src: url(C:\Users\Gabriel\AppData\Local\Microsoft\Windows\Fonts);
+}
+
 *{
   box-sizing: border-box;
   margin: 0;
