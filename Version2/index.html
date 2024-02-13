@@ -3,11 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Etch A Sketch</title>
   </head>
   <body>
+    <p class="main-header">
+      Welcome to a nostalgic memory, embrace your childhood
+    </p>
+    <div class="modal" style="display: none">
+      <div class="inner-modal">
+        <div class="close">x</div>
+        <h2>Use key arrows to draw</h2>
+        <h2>Grab and shake it to erase</h2>
+      </div>
+    </div>
     <div class="main-container">
-      <div class="board"></div>
+      <div class="etch-frame">
+        <div class="board-header">Etch A Sketch</div>
+        <canvas class="board" width="700px" height="400px"></canvas>
+        <span class="knob knob-l"></span>
+        <span class="knob knob-r"></span>
+      </div>
     </div>
   </body>
 </html>
