@@ -38,14 +38,19 @@
   margin: auto;
   display: flex;
   flex-direction: column;
+  background-color: var(--etchFrameColor);
 }
 
 .board-header {
-  font-family: "Anonymous Pro", monospace;
+  font-family: "CustomFont", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: white;
 }
 
 .board {
   margin: auto;
+  background-color: var(--etchDrawBoardColor);
 }
 
 .knob-container {
@@ -58,9 +63,11 @@
   width: 75px;
   height: 75px;
   border-radius: 100%;
+  background-color: var(--etchDrawBoardColor);
 }
 .knob-r {
   width: 75px;
   height: 75px;
   border-radius: 100%;
+  background-color: var(--etchDrawBoardColor);
 }
