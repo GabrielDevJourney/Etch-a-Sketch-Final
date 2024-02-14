@@ -40,10 +40,27 @@
   flex-direction: column;
 }
 
+.board-header {
+  font-family: "Anonymous Pro", monospace;
+}
+
 .board {
   margin: auto;
 }
 
-.board-header {
-  font-family: "Anonymous Pro", monospace;
+.knob-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.knob-l {
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+}
+.knob-r {
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
 }
