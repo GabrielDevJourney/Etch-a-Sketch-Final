@@ -15,7 +15,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 0.5px solid black;
   font-size: 20px;
 }
 
@@ -39,6 +38,7 @@
   display: flex;
   flex-direction: column;
   background-color: var(--etchFrameColor);
+  border-radius: 20px;
 }
 
 .board-header {
@@ -46,28 +46,34 @@
   font-size: 50px;
   text-align: center;
   color: white;
+  padding-top: 15px;
 }
 
 .board {
   margin: auto;
   background-color: var(--etchDrawBoardColor);
+  border-radius: 20px;
 }
 
 .knob-container {
+  margin: -20px 0 10px 0;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 .knob-l {
+  margin-left: 20px;
   width: 75px;
   height: 75px;
   border-radius: 100%;
-  background-color: var(--etchDrawBoardColor);
+  background-color: white;
 }
 .knob-r {
+  margin-right: 20px;
   width: 75px;
   height: 75px;
   border-radius: 100%;
-  background-color: var(--etchDrawBoardColor);
+  background-color: white;
 }
