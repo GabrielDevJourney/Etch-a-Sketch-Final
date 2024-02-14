@@ -29,19 +29,21 @@
   letter-spacing: 5px;
   line-height: 70px;
   color: var(--header-color);
-  display: flex;
-}
-
-.main-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .etch-frame {
   width: 900px;
   height: 600px;
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
 }
+
+.board {
+  margin: auto;
+}
+
 .board-header {
   font-family: "Anonymous Pro", monospace;
 }
