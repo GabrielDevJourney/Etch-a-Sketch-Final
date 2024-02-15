@@ -5,7 +5,7 @@
 
 :root {
   --header-color: #1d1f25;
-  --etchFrameColor: #c492b1;
+  --etchFrameColor: #1D1F25;
   --etchDrawBoardColor: white;
   --modalColor: white;
   --textModal: #282936;
@@ -42,9 +42,9 @@ body {
   background-color: var(--etchFrameColor);
   border-radius: 20px;
   box-shadow: 16px 14px 37px 0px rgba(0, 0, 0, 0.6),
-    inset 10px 0px 13px -5px rgba(255, 255, 255, 0.5),
-    inset -9px 12px 7px -9px rgba(255, 255, 255, 0.6);
-  border: 0.5px solid #C492B1;
+    inset 5px 0px 13px -5px rgba(255, 255, 255, 0.5),
+    inset -7px 7px 7px -9px rgba(255, 255, 255, 0.6);
+  border: 0.5px solid #1D1F25;
 }
 
 .board-header {
@@ -58,7 +58,18 @@ body {
 .board {
   margin: auto;
   background-color: var(--etchDrawBoardColor);
-  border-radius: 20px;
+  border-radius: 8px;
+    box-shadow: 0px 1px 0 rgba(255,255,255,0.08), 1px 0px 0 rgba(255,255,255,0.08),
+                1px 2px 0 rgba(255,255,255,0.08), 2px 1px 0 rgba(255,255,255,0.08),
+                2px 3px 0 rgba(255,255,255,0.08), 3px 2px 0 rgba(255,255,255,0.08),
+                3px 4px 0 rgba(255,255,255,0.08), 4px 3px 0 rgba(255,255,255,0.08),
+                4px 5px 0 rgba(255,255,255,0.08), 5px 4px 0 rgba(255,255,255,0.08),
+
+                -0px -1px 0 rgba(0,0,0,0.05), -1px -0px 0 rgba(0,0,0,0.05),
+                -1px -2px 0 rgba(0,0,0,0.05), -2px -1px 0 rgba(0,0,0,0.05),
+                -2px -3px 0 rgba(0,0,0,0.05), -3px -2px 0 rgba(0,0,0,0.05),
+                -3px -4px 0 rgba(0,0,0,0.05), -4px -3px 0 rgba(0,0,0,0.05),
+                -4px -5px 0 rgba(0,0,0,0.05), -5px -4px 0 rgba(0,0,0,0.05);
 }
 
 .knob-container {
