@@ -5,11 +5,11 @@
 
 :root {
   --header-color: #1d1f25;
-  --etchFrameColor: #1D1F25;
+  --etchFrameColor: #1d1f25;
   --etchDrawBoardColor: white;
   --modalColor: white;
   --textModal: #282936;
-  --page-color: #bce7fd;
+  --page-color: white;
 }
 body {
   background-color: var(--page-color);
@@ -29,7 +29,7 @@ body {
   text-align: center;
   letter-spacing: 5px;
   line-height: 70px;
-  color: white;
+  color: var(--etchFrameColor);
 }
 
 .etch-frame {
@@ -44,7 +44,7 @@ body {
   box-shadow: 16px 14px 37px 0px rgba(0, 0, 0, 0.6),
     inset 5px 0px 13px -5px rgba(255, 255, 255, 0.5),
     inset -7px 7px 7px -9px rgba(255, 255, 255, 0.6);
-  border: 0.5px solid #1D1F25;
+  border: 0.5px solid #1d1f25;
 }
 
 .board-header {
@@ -59,17 +59,17 @@ body {
   margin: auto;
   background-color: var(--etchDrawBoardColor);
   border-radius: 8px;
-    box-shadow: 0px 1px 0 rgba(255,255,255,0.08), 1px 0px 0 rgba(255,255,255,0.08),
-                1px 2px 0 rgba(255,255,255,0.08), 2px 1px 0 rgba(255,255,255,0.08),
-                2px 3px 0 rgba(255,255,255,0.08), 3px 2px 0 rgba(255,255,255,0.08),
-                3px 4px 0 rgba(255,255,255,0.08), 4px 3px 0 rgba(255,255,255,0.08),
-                4px 5px 0 rgba(255,255,255,0.08), 5px 4px 0 rgba(255,255,255,0.08),
-
-                -0px -1px 0 rgba(0,0,0,0.05), -1px -0px 0 rgba(0,0,0,0.05),
-                -1px -2px 0 rgba(0,0,0,0.05), -2px -1px 0 rgba(0,0,0,0.05),
-                -2px -3px 0 rgba(0,0,0,0.05), -3px -2px 0 rgba(0,0,0,0.05),
-                -3px -4px 0 rgba(0,0,0,0.05), -4px -3px 0 rgba(0,0,0,0.05),
-                -4px -5px 0 rgba(0,0,0,0.05), -5px -4px 0 rgba(0,0,0,0.05);
+  box-shadow: 0px 1px 0 rgba(255, 255, 255, 0.08),
+    1px 0px 0 rgba(255, 255, 255, 0.08), 1px 2px 0 rgba(255, 255, 255, 0.08),
+    2px 1px 0 rgba(255, 255, 255, 0.08), 2px 3px 0 rgba(255, 255, 255, 0.08),
+    3px 2px 0 rgba(255, 255, 255, 0.08), 3px 4px 0 rgba(255, 255, 255, 0.08),
+    4px 3px 0 rgba(255, 255, 255, 0.08), 4px 5px 0 rgba(255, 255, 255, 0.08),
+    5px 4px 0 rgba(255, 255, 255, 0.08), -0px -1px 0 rgba(0, 0, 0, 0.05),
+    -1px -0px 0 rgba(0, 0, 0, 0.05), -1px -2px 0 rgba(0, 0, 0, 0.05),
+    -2px -1px 0 rgba(0, 0, 0, 0.05), -2px -3px 0 rgba(0, 0, 0, 0.05),
+    -3px -2px 0 rgba(0, 0, 0, 0.05), -3px -4px 0 rgba(0, 0, 0, 0.05),
+    -4px -3px 0 rgba(0, 0, 0, 0.05), -4px -5px 0 rgba(0, 0, 0, 0.05),
+    -5px -4px 0 rgba(0, 0, 0, 0.05);
 }
 
 .knob-container {
@@ -80,17 +80,17 @@ body {
   justify-content: space-between;
 }
 
-.knob-l {
-  margin-left: 20px;
+.knob {
   width: 60px;
   height: 60px;
-  border-radius: 100%;
-  background-color: white;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: inset -4px 4px 12px 0px rgba(29,31,37,0.6),inset 0px 4px 13px -3px rgba(29,31,37,0.6),inset 0px 0px 0px 0px rgba(29,31,37,0.6),inset 0px 0px 7px 0px rgba(29,31,37,0.6); 
+
+}
+.knob-l {
+  margin-left: 20px;
 }
 .knob-r {
   margin-right: 20px;
-  width: 60px;
-  height: 60px;
-  border-radius: 100%;
-  background-color: white;
 }
