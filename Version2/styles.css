@@ -106,4 +106,9 @@ body {
   align-items: flex-end;
   justify-content: center;
   font-family: "Anonymous Pro";
+  margin-top: 20px;
+}
+
+.footer > p{
+  font-size: 0.85rem;
 }
