@@ -109,8 +109,8 @@ body {
   margin-top: 20px;
 }
 
-.footer > p{
-  font-size: 1rem;
+.name-footer, .fa-github{
+  font-size: 1.2rem;
 }
 
 .icon-github{
