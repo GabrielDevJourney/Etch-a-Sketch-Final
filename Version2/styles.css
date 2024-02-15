@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 @font-face {
   font-family: "CustomFont";
   src: url("./fonts/OHIOPLAYER-XEO.TTF");
@@ -11,9 +13,11 @@
   --textModal: #282936;
   --page-color: white;
 }
+
 body {
-  background-color: var(--page-color);
+  height: 100vh;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -85,12 +89,21 @@ body {
   height: 60px;
   border-radius: 50%;
   background: #ffffff;
-  box-shadow: inset -4px 4px 12px 0px rgba(29,31,37,0.6),inset 0px 4px 13px -3px rgba(29,31,37,0.6),inset 0px 0px 0px 0px rgba(29,31,37,0.6),inset 0px 0px 7px 0px rgba(29,31,37,0.6); 
-
+  box-shadow: inset -4px 4px 12px 0px rgba(29, 31, 37, 0.6),
+    inset 0px 4px 13px -3px rgba(29, 31, 37, 0.6),
+    inset 0px 0px 0px 0px rgba(29, 31, 37, 0.6),
+    inset 0px 0px 7px 0px rgba(29, 31, 37, 0.6);
 }
 .knob-l {
   margin-left: 20px;
 }
 .knob-r {
   margin-right: 20px;
+}
+
+.footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: "Anonymous Pro";
 }
