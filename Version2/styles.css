@@ -62,12 +62,17 @@ body {
   font-size: 50px;
   text-align: center;
   color: white;
-  padding-top: 15px;
+  padding-top: 18px;
   flex-grow: 1;
 }
 
-.fa-info, .board-header{
-  border: 0.5px solid white;
+.fa-info{
+  margin: 5px;
+  padding: 8px;
+}
+
+.fa-info:hover{
+  cursor: pointer;
 }
 
 .board {
