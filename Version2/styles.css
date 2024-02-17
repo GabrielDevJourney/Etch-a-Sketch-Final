@@ -53,11 +53,21 @@ body {
 }
 
 .board-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.board-header-text{
   font-family: "CustomFont", sans-serif;
   font-size: 50px;
   text-align: center;
   color: white;
   padding-top: 15px;
+  flex-grow: 1;
+}
+
+.fa-info, .board-header{
+  border: 0.5px solid white;
 }
 
 .board {
