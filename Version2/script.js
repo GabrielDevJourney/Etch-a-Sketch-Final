@@ -1,22 +1,16 @@
 //*INSTRUCTIONS WINDOW APPEAR AND FADEOUT FUNCTION
 
-let modal = document.querySelector(".modal");
+const modal = document.querySelector(".modal");
+const iconInstructions = document.querySelector(".info-ico")
+const closeBtn = document.querySelector(".close")
 modal.style.display = 'block'
 
-function fadeout(){
-  let opacity = 1;
-  let step = 1 / 50; //*variable determines the size of each step in the opacity decrement, 50 steps for a smoother transition
+iconInstructions.addEventListener('click', () => {
+  modal.style.display = 'block'
 
-  let interval = setInterval( function(){
+})
 
-    modal.style.opacity = opacity //*set opacity
-    opacity -= step //* decrease opacity
+closeBtn.addEventListener('click', () =>{
+  modal.style.display = 'none'
+})
 
-    if (opacity <= 0){
-      clearInterval(interval) //* stop interval when reaches 0
-      modal.style.display = 'none'
-    }
-    
-  }, 20) //*time to repeat the fucntion until it goes to 0 20milliseconds
-}
-setTimeout(fadeout, 4000)

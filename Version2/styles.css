@@ -66,14 +66,6 @@ body {
   flex-grow: 1;
 }
 
-.fa-info{
-  margin: 5px;
-  padding: 8px;
-}
-
-.fa-info:hover{
-  cursor: pointer;
-}
 
 .board {
   margin: auto;
@@ -128,7 +120,8 @@ body {
 /* *INTRUCTIONS WINDOW STYLING */
 
 .modal {
-  position: absolute;
+  display: none;
+  position: fixed;
   width: 400px;
   top: 47%;
   left: 35.5%;
@@ -152,6 +145,16 @@ body {
   color: red;
   cursor: pointer;
 }
+
+/* *ICON INSTRUCTIONS BEHAVIOR AND STYLING */
+.info-ico{
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+
 
 h2 {
   font-family: "Anonymous Pro";
