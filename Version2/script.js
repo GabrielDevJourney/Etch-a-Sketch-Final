@@ -99,3 +99,6 @@ function handleKeysUp(e){
     deltaY = 0;
   }
 }
+
+document.addEventListener("keydown", handleKeyDown);
+document.addEventListener("keyup", handleKeyUp);
