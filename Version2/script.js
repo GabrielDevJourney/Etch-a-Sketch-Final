@@ -91,3 +91,11 @@ function handleKeysDown(e){
 
   cursor.draw(desltaX,deltaY)
 }
+
+function handleKeysUp(e){
+  if (e.keyCode == 37 || e.keyCode == 39) {
+    deltaX = 0;
+  } else if (e.keyCode == 38 || e.keyCode == 40) {
+    deltaY = 0;
+  }
+}
