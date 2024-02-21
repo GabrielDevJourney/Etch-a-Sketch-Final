@@ -62,7 +62,8 @@ const cursor = {
       this.y = h;
 
     }
-    
+    //*Will draw a line from the previous coordonate for the new one
+    ctx.lineTo(this.x,this.y)
 
   }
 }
