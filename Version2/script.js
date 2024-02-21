@@ -69,3 +69,25 @@ const cursor = {
     ctx.stroke()
   }
 }
+
+//*Function to handle key down
+function handleKeysDown(e){
+  //*left key arrow handle
+  if(e.keyCode == 37){
+    desltaX = -1
+  }
+  //*down key arrow handle
+  if(e.keyCode == 38){
+    desltaY = -1
+  }
+  //*right key arrow handle
+  if (e.keyCode == 39) {
+    desltaX = 1;
+  }
+  //*up key arrow handle
+  if (e.keyCode == 40) {
+    desltaY = 1;
+  }
+
+  cursor.draw(desltaX,deltaY)
+}
