@@ -21,3 +21,8 @@ const w = 550
 const h = 320
 let desltaX = 0
 let deltaY = 0
+
+
+canvas.width = w
+canvas.height = h
+
