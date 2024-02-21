@@ -64,6 +64,8 @@ const cursor = {
     }
     //*Will draw a line from the previous coordonate for the new one
     ctx.lineTo(this.x,this.y)
-
+    ctx.closePath()
+    //*stroke the board with each colored unit
+    ctx.stroke()
   }
 }
