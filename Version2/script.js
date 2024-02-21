@@ -35,7 +35,34 @@ const cursor = {
 
 //*Based on the input of user x,y values will change to draw
   draw : (x,y) => {
-
+    //*start new path on canvas
     ctx.beginPath()
+    //*how much cursor will move in this case 3 units for each unit of x and y
+    ctx.moveTo(this.x,this.y)
+    this.x += 3 * x
+    this.h += 3 * y
+
+    //*Checks if the coordonates have reach boundaries of board
+    //*So it will adjust, for not going out of it
+    if(this.x <= 0){
+      
+      this.x = 0
+
+    } else if(this.x >= w){
+      
+      this.x = w
+
+    }
+    if (this.y <= 0) {
+
+      this.y = 0;
+
+    } else if (this.y >= h) {
+
+      this.y = h;
+
+    }
+    
+
   }
 }
