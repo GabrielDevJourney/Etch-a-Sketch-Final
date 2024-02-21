@@ -26,3 +26,7 @@ let deltaY = 0
 canvas.width = w
 canvas.height = h
 
+const cursor = {
+  x : w / 2 - 3 /2, 
+  y : h/ 2 - 3 / 2,
+}
