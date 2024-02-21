@@ -26,7 +26,16 @@ let deltaY = 0
 canvas.width = w
 canvas.height = h
 
+//*Make drawing start in the middle of the board
+//*Object with 3 properties x,y,draw
+//* draw (method because it performs an action)
 const cursor = {
   x : w / 2 - 3 /2, 
   y : h/ 2 - 3 / 2,
+
+//*Based on the input of user x,y values will change to draw
+  draw : (x,y) => {
+
+    ctx.beginPath()
+  }
 }
