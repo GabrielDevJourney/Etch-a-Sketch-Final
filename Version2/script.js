@@ -1,5 +1,4 @@
-//*INSTRUCTIONS WINDOW APPEAR AND FADEOUT FUNCTION
-
+//*INSTRUCTIONS WINDOW 
 const modal = document.querySelector(".modal");
 const iconInstructions = document.querySelector(".info-ico")
 const closeBtn = document.querySelector(".close")
@@ -14,3 +13,11 @@ closeBtn.addEventListener('click', () =>{
   modal.style.display = 'none'
 })
 
+//*CANVAS DRAWING FUCNTIONALITY
+
+const canvas = document.querySelector('canvas')
+const ctx = canvas.getContext('2d')
+const w = 550
+const h = 320
+let desltaX = 0
+let deltaY = 0
