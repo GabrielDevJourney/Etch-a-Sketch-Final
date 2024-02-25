@@ -44,13 +44,14 @@ body {
   margin: auto;
   padding: 50px;
   background-color: lightgray;
+  border-radius: 1rem;
 }
 
 .close {
   position: absolute;
   top: -5px;
   right: 2px;
-  padding: 2px;
+  padding: 8px;
   color: red;
   cursor: pointer;
 }
@@ -75,7 +76,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--etchFrameColor);
-  border-radius: 20px;
+  border-radius: 1rem;
   box-shadow: 16px 14px 37px 0px rgba(0, 0, 0, 0.6),
     inset 5px 0px 13px -5px rgba(255, 255, 255, 0.5),
     inset -7px 7px 7px -9px rgba(255, 255, 255, 0.6);
