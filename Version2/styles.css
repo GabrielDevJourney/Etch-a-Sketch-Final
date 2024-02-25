@@ -144,6 +144,18 @@ body {
 
 /* *COLOR PICKER */
 
+.color-picker-div{
+  display: flex;
+  align-items: center;
+}
+
+.color-picker-input{
+  /* *brownsers default appearance to none */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 1rem;
+}
 
 
 /* *FOOTER */
