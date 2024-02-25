@@ -34,6 +34,8 @@ let y = canvas.height / 2; //*?help inicialize at middle height
 const step = 4; //*?number of units that the line with move each keypress
 
 function draw(x, y) {
+  ctx.beginPath() //?start a new sub-path so we can utilize color only from there not the whole line drawn until then
+  ctx.moveTo(x,y)
   ctx.strokeStyle = currentColor //?utilize the current color choosen
   ctx.lineTo(x, y);
   ctx.stroke();
@@ -70,7 +72,7 @@ function handleKeysDown(e) {
       x = Math.min(canvas.width, x + step); //*? mathmax 0 used to prevent line to go above x = max width of canvas
   }
   ctx.lineTo(x, y);
-  ctx.stroke;
+  ctx.stroke();
   draw(x, y);
 }
 
