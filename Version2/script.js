@@ -34,11 +34,11 @@ let y = canvas.height / 2; //*?help inicialize at middle height
 const step = 4; //*?number of units that the line with move each keypress
 
 function draw(x, y) {
-  ctx.beginPath() //?start a new sub-path so we can utilize color only from there not the whole line drawn until then
-  ctx.moveTo(x,y)
-  ctx.strokeStyle = currentColor //?utilize the current color choosen
-  ctx.lineTo(x, y);
-  ctx.stroke();
+  ctx.beginPath() //? start a new sub-path so we can utilize color only from there not the whole line drawn until then
+  ctx.moveTo(x,y) //? move to specific coordonates
+  ctx.strokeStyle = currentColor //? utilize the current color choosen
+  ctx.lineTo(x, y); //? draw line to a specific coordonate
+  ctx.stroke(); //? render lines in canvas
 }
 
 function handleKeysDown(e) {
@@ -46,11 +46,15 @@ function handleKeysDown(e) {
   switch (e.key) {
     case "ArrowUp":
     case 38:
+
       //*?since in canvas the (0,0) is in the top left corner i need to subtract from the height to be able to go upwards
       //*? so when math terms we must think reverse\opposite of the traditional axis so to go up we must subctract weird i know
       //*? i was confused too
       //*?math.max(0) ensures that the line doesnt go below zero in this case doesnt go out of top board
-      y = Math.max(0, y - step); //*?this is calculating the new y - coordinate btw so the y-step is attached to the math.max 0 so if the value becomes 0 is because is at the top of the canvas
+
+      y = Math.max(0, y - step); 
+
+      //*?this is calculating the new y - coordinate btw so the y-step is attached to the math.max 0 so if the value becomes 0 is because is at the top of the canvas
       //* WHY SO MANY COMMENTS JUST TO ENSURE ITS UNDERSTANDBLE TO MYSELF MOSTLY AHAH */
       break;
 
