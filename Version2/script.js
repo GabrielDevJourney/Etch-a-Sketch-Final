@@ -13,11 +13,11 @@ closeBtn.addEventListener("click", () => {
 });
 
 //*COLOR PICKER
-
 const colorPicker = document.querySelector('#color-picker')
 
 //*?update colorpicker every time user change the color 
 colorPicker.oninput = (e) => setCurrentColor(e.target.value);
+let currentColor = '#000000' //?inicial color
 
 //*CANVAS DRAWING FUCNTIONALITY
 
@@ -28,6 +28,7 @@ let y = canvas.height / 2; //*?help inicialize at middle height
 const step = 4; //*?number of units that the line with move each keypress
 
 function draw(x, y) {
+  ctx.strokeStyle = currentColor //?utilize the current color choosen
   ctx.lineTo(x, y);
   ctx.stroke();
 }
