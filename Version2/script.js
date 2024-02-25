@@ -12,12 +12,18 @@ closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
+
+
 //*COLOR PICKER
 const colorPicker = document.querySelector('#color-picker')
-
-//*?update colorpicker every time user change the color 
-colorPicker.oninput = (e) => setCurrentColor(e.target.value);
 let currentColor = '#000000' //?inicial color
+
+//*track color change
+colorPicker.addEventListener('input', (e) => {
+  currentColor = e.target.value
+})
+
+
 
 //*CANVAS DRAWING FUCNTIONALITY
 
