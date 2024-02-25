@@ -34,7 +34,7 @@ let y = canvas.height / 2; //*?help inicialize at middle height
 const step = 4; //*?number of units that the line with move each keypress
 
 function draw(x, y) {
-  ctx.beginPath() //? start a new sub-path so we can utilize color only from there not the whole line drawn until then
+  ctx.beginPath() //? start a new sub-path like lifting a pen so user can change color whenever he wants
   ctx.moveTo(x,y) //? move to specific coordonates
   ctx.strokeStyle = currentColor //? utilize the current color choosen
   ctx.lineTo(x, y); //? draw line to a specific coordonate
