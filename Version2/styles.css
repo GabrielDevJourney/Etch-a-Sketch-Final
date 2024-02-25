@@ -149,12 +149,21 @@ body {
   align-items: center;
 }
 
-.color-picker-input{
+#color-picker{
   /* *brownsers default appearance to none */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  background-color: transparent;
+  width: 80px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+#color-picker::-webkit-color-swatch{
   border-radius: 1rem;
+  border: none;
 }
 
 
