@@ -129,7 +129,7 @@ document.addEventListener('mousemove', (e) => {
     const deltaX = Math.abs(e.pageX - inicialMousePositionX)
     const deltaY = Math.abs(e.pageY - inicialMousePositionY)
   
-    const shakeDistance = 10
+    const shakeDistance = 350
     if(deltaX > shakeDistance || deltaY > shakeDistance){
       clearCanvas()
     }
