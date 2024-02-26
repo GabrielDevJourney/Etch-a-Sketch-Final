@@ -80,11 +80,48 @@ function handleKeysDown(e) {
   draw(x, y);
 }
 
-//*Steup inicial
+//*Steup inicial of the path
 ctx.lineWidth = 2;
 ctx.beginPath();
 ctx.moveTo(x, y);
 
 window.addEventListener("keydown", handleKeysDown);
 
+//* GRAB AND SHAKE FUCNTIONALITY
 
+//?REQUIREMENTS
+//* CLEAR FUCNTION
+//* TRACK THE MOVEMENT TROUGHT THE AXIS FROM WHERE IT WAS TO WHERE IT IS ALL BASED ON THE MOUSE EVENT MOVEMENT
+//* WHEN IS MOVE FROM X TO NEW X FROM Y TO NEW Y I WILL CALL THE CLEAR FUCNTION
+//* BASED ON A DEFAULT DETERMINE VALUE IF THE MOVEMENT FROM THE OLD TO NEW AXIS IS ABOVE THAT IT WILL CLEAR
+
+//*Clear canvas drawing
+function clearCanvas(){
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
+}
+
+let starX = 0
+let startY = 0
+
+const frameShake = document.querySelector(".etch-frame");
+
+frameShake.addEventListener('mousedown', (e) => {
+  //? Getting coordonates of inicial mouse position
+  starX = e.pageX
+  startY = e.pageY
+})
+
+frameShake.addEventListener('mousemove', (e) => {
+  //? Get the new coordonates of the mouse position
+  const newX = e.pageX
+  const newY = e.pageY
+
+  //? Calculate movement distance value used math.abs for an absolute number if there is no negative outcome values 
+  const deltaX = Math.abs(newX - starX)
+  const deltaY = Math.abs(newY-startY)
+
+  const shakeDistance = 10
+  if(deltaX > shakeDistance || deltaY > shakeDistance){
+    clearCanvas()
+  }
+})
