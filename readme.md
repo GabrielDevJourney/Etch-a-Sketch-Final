@@ -18,4 +18,4 @@ This project is a web-based version of the classic Etch A Sketch toy. Users can 
 https://github.com/GabrielDevJourney/Etch-a-Sketch-Final/assets/148251991/a321c5de-3e29-4423-bb69-f3c47ef603ec
 
 ## Live Demo
-
+[Demo]( https://gabrieldevjourney.github.io/Etch-a-Sketch-Final/)
