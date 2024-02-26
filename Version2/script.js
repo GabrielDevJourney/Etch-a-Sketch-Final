@@ -107,16 +107,18 @@ let draggable = false
 
 let inicialFramePositionX = 0
 let inicialFramePositionY = 0
-const distanceBetweenMouseFrame = 0
 
+const distanceBetweenMouseFrame = 0
 
 const etchFrame = document.querySelector(".etch-frame");
 
 etchFrame.addEventListener('mousedown', (e) => {
-  //? Getting coordonates of inicial mouse position
   draggable = true
-  inicialMousePositionX = e.pageX - distanceBetweenMouseFrame
+  //? Getting coordonates of inicial mouse position relative to frame
+  inicialMousePositionX = e.pageX - distanceBetweenMouseFrame //this help to make the mouse and frame be in the same position for say
   inicialMousePositionY = e.pageY - distanceBetweenMouseFrame
+
+  //?inicial frame coordonates value
   inicialFramePositionX = etchFrame.offsetLeft
   inicialFramePositionY = etchFrame.offsetTop
 })
