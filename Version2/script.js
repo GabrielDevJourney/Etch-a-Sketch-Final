@@ -102,26 +102,47 @@ function clearCanvas(){
 
 let starX = 0
 let startY = 0
+let draggable = false
+//?for later reset after shaking
+let inicialPositionX = 0
+let inicialPositionY = 0
+
 
 const frameShake = document.querySelector(".etch-frame");
 
 frameShake.addEventListener('mousedown', (e) => {
   //? Getting coordonates of inicial mouse position
-  starX = e.pageX
-  startY = e.pageY
+  draggable = true
+  starX = e.pageX - frameShake.offsetLeft
+  startY = e.pageY - frameShake.offsetTop
 })
 
-frameShake.addEventListener('mousemove', (e) => {
-  //? Get the new coordonates of the mouse position
-  const newX = e.pageX
-  const newY = e.pageY
+document.addEventListener('mousemove', (e) => {
 
   //? Calculate movement distance value used math.abs for an absolute number if there is no negative outcome values 
-  const deltaX = Math.abs(newX - starX)
-  const deltaY = Math.abs(newY-startY)
+  if(draggable){
 
-  const shakeDistance = 10
-  if(deltaX > shakeDistance || deltaY > shakeDistance){
-    clearCanvas()
+    const deltaX = Math.abs(e.pageX - starX)
+    const deltaY = Math.abs(e.pageY - startY)
+  
+    const shakeDistance = 10
+    if(deltaX > shakeDistance || deltaY > shakeDistance){
+      clearCanvas()
+    }
+  
+    frameShake.style.left = (e.pageX - starX) + 'px'
+    frameShake.style.top = (e.pageY - startY) + 'px'
   }
+})
+
+document.addEventListener('mouseup', ()=>{
+  draggable = false
+  frameShake.style.left = inicialPositionX + 'px'
+  frameShake.style.top = inicialPositionY + 'px'
+})
+
+//? disable color picker draggable so doesnt clear canvas when chaging color
+
+colorPicker.addEventListener('mousedown', (e) => {
+  e.preventDefault
 })
