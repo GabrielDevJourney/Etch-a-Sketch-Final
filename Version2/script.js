@@ -100,21 +100,25 @@ function clearCanvas(){
   ctx.clearRect(0, 0, canvas.width, canvas.height)
 }
 
-let starX = 0
-let startY = 0
+let inicialMousePositionX = 0
+let inicialMousePositionY = 0
+
 let draggable = false
-//?for later reset after shaking
-let inicialPositionX = 0
-let inicialPositionY = 0
+
+let inicialFramePositionX = 0
+let inicialFramePositionY = 0
+const distanceBetweenMouseFrame = 0
 
 
-const frameShake = document.querySelector(".etch-frame");
+const etchFrame = document.querySelector(".etch-frame");
 
-frameShake.addEventListener('mousedown', (e) => {
+etchFrame.addEventListener('mousedown', (e) => {
   //? Getting coordonates of inicial mouse position
   draggable = true
-  starX = e.pageX - frameShake.offsetLeft
-  startY = e.pageY - frameShake.offsetTop
+  inicialMousePositionX = e.pageX - distanceBetweenMouseFrame
+  inicialMousePositionY = e.pageY - distanceBetweenMouseFrame
+  inicialFramePositionX = etchFrame.offsetLeft
+  inicialFramePositionY = etchFrame.offsetTop
 })
 
 document.addEventListener('mousemove', (e) => {
@@ -122,27 +126,29 @@ document.addEventListener('mousemove', (e) => {
   //? Calculate movement distance value used math.abs for an absolute number if there is no negative outcome values 
   if(draggable){
 
-    const deltaX = Math.abs(e.pageX - starX)
-    const deltaY = Math.abs(e.pageY - startY)
+    const deltaX = Math.abs(e.pageX - inicialMousePositionX)
+    const deltaY = Math.abs(e.pageY - inicialMousePositionY)
   
     const shakeDistance = 10
     if(deltaX > shakeDistance || deltaY > shakeDistance){
       clearCanvas()
     }
   
-    frameShake.style.left = (e.pageX - starX) + 'px'
-    frameShake.style.top = (e.pageY - startY) + 'px'
+    etchFrame.style.left = (e.pageX - inicialMousePositionX) + 'px'
+    etchFrame.style.top =  (e.pageY - inicialMousePositionY) + 'px'
   }
 })
 
+//?reset position after dragging
 document.addEventListener('mouseup', ()=>{
   draggable = false
-  frameShake.style.left = inicialPositionX + 'px'
-  frameShake.style.top = inicialPositionY + 'px'
+  etchFrame.style.left = 0 + 'px'
+  etchFrame.style.top = 0 + 'px'
 })
 
 //? disable color picker draggable so doesnt clear canvas when chaging color
 
 colorPicker.addEventListener('mousedown', (e) => {
-  e.preventDefault
+  e.preventDefault()
+  e.stopPropagation()
 })
